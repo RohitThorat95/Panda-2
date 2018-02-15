@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="task2">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dashboard | Task 2</title>
+<!-- CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!-- custom stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body ng-controller="myController">
+
+<!-- Navigation -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active makeround">
+                  <a class="nav-link " href="#"><i class="fas fa-rupee-sign"></i></a>
+                </li>
+                <li class="nav-item makeround1">
+                  <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                </li>
+                <li class="nav-item makeround2">
+                  <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+                </li>
+                <li class="nav-item makeround3">
+                  <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+<!-- Navigation -->
+
+<!-- Side Navigation -->
+        <div class="sidenav">
+          <a href="#"><i class="fas fa-th-list"></i></a>
+          <a href="#"><i class="fas fa-clipboard"></i></a>
+          <a href="#"><i class="fas fa-save"></i></a>
+        </div>
+<!-- Side Navigation -->
+
+<!-- main content -->
+       <div class="container addmargin">
+         <!-- first row -->
+         <div class="row text-center text-lg-left">
+
+          <div ng-repeat="item in items" class="col-lg-3 col-md-4 col-xs-6">
+            <a href="#" class="d-block mb-4 h-100">
+              <div class="mycard text-center">
+                <i class="{{item.icon}}"></i>
+                <h5>{{item.heading}}</h5>
+                <p class="text-muted">{{item.words}}</p>
+                <button class="btn btn-success">Order</button>
+              </div>
+            </a>
+          </div>
+
+        </div>
+         <!-- second row -->
+         <div class="row text-center text-lg-left">
+
+           <div ng-repeat="item in twoItems" class="col-lg-6 col-md-6 col-sm-12">
+             <a href="#" class="d-block mb-4 h-100">
+               <div class="mycard text-center">
+                 <i class="{{item.icon}}"></i>
+                 <h5>{{item.heading}} </h5>
+                 <p class="text-muted">{{item.words}}</p>
+                 <button class="btn btn-success">Order</button>
+               </div>
+             </a>
+           </div>
+
+         </div>
+
+       </div>
+<!-- main content -->
+
+
+<!-- Scripts -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+  <script src="./angular/app.js"></script>
+  <script src="./angular/controller/myController.js"></script>
+
+</body>
+</html>
